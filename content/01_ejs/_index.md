@@ -11,7 +11,9 @@ Embedded JavaScript, tiene extensión `.ejs`. Es básicamente HTML con pedazos d
 Un plug in para VSCode de syntax highlighting
 
 ## render (express)
-Usar `render` en lugar de `sendFile` ya que sólo funciona para páginas estáticas, no templates. Además se puede enviar datos como segundo parámetro `{ name: "gino angelo" }`
+Usar `render` en lugar de `sendFile` ya que sólo funciona para páginas estáticas, no templates. Además se puede enviar datos como segundo parámetro `{ name: "gino angelo" }`. 
+
+`render` busca archivos relativos a la carpeta `views`, es por eso que solo se escribe `"index.ejs"` como primer parámetro
 
 {{< highlight type="js" wrap="false" hl_lines="3" title="index.js">}}
 ...

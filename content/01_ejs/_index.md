@@ -11,12 +11,12 @@ Embedded JavaScript, tiene extensión `.ejs`. Es básicamente HTML con pedazos d
 Un plug in para VSCode de syntax highlighting
 
 ## render (express)
-Usar `render` en lugar de `sendFile` ya que sólo funciona para páginas estáticas. Además se puede enviar datos como segundo parámetro `{ name: "gino angelo" }`
+Usar `render` en lugar de `sendFile` ya que sólo funciona para páginas estáticas, no templates. Además se puede enviar datos como segundo parámetro `{ name: "gino angelo" }`
 
-{{< highlight type="js" wrap="true" hl_lines="3" title="index.js">}}
+{{< highlight type="js" wrap="false" hl_lines="3" title="index.js">}}
 ...
 app.get("/", (req, res) => {
-    res.render(__dirname + "/views/index.ejs", { name: "gino angelo" });
+    res.render("index.ejs", { name: req.body["name"] });
 })
 ...
 {{< /highlight >}}

@@ -1,7 +1,7 @@
 +++
 archetype = "chapter"
 title = "2. Sintaxis EJS"
-weight = 1
+weight = 2
 +++
 
 ## Tags EJS
@@ -25,11 +25,11 @@ app.get("/", (req, res) => {
 {{< highlight type="html" wrap="true" title="views/index.ejs">}}
 <%# lista no ordenada de frutas %>
   <ul>
-  <% for(let i=0;i<fruits.length;i++) {%>
+  <% fruits.forEach((fruit) => {%>
     <li>
-    <%= fruits[i] %>
+    <%= fruit %>
     </li>
-    <% } %>
+    <% }) %>
   </ul>
 {{< /highlight >}}
 

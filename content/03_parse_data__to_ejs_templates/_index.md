@@ -91,7 +91,7 @@ app.listen(port, () => {
 </html>
 {{< /highlight >}}
 
-{{% expand title="solución" open="true" %}}
+{{% expand title="solución" %}}
 
 ```js {title="index.js"}
 ...
